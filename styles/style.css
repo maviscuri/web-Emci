@@ -230,7 +230,7 @@ body {
 }
 .gallery-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   height: 500px;
   border-radius: 10px;
   overflow: hidden;
@@ -885,7 +885,7 @@ body {
 .faq-question {
   width: 100%;
   padding: 1rem 1.5rem;
-  text-align: center;
+  text-align: left;
   background-color: var(--color-blanco);
   border: none;
   color: var(--color-secundaria);
@@ -944,7 +944,7 @@ body {
 .technique-comparison th, 
 .technique-comparison td {
   padding: 0.8rem;
-  text-align: left;
+  text-align: center;
   border: 1px solid rgba(43, 59, 80, 0.2);
 }
 
@@ -1368,12 +1368,17 @@ body {
   .faq-question {
     font-size: 0.9rem;
   }
+  .payment-icons {
+    margin: auto 5rem;
+  }
   .technique-comparison {
+    display: block;
     overflow-x: auto;
   }
   /*footer*/
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .footer-col {
