@@ -1368,7 +1368,9 @@ body {
   .faq-question {
     font-size: 0.9rem;
   }
-
+  .technique-comparison {
+    overflow-x: auto;
+  }
   /*footer*/
   .footer-grid {
     grid-template-columns: 1fr;
