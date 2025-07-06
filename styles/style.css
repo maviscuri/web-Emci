@@ -475,24 +475,33 @@ body {
   line-height: 1.7;
 }
 
-.product-features {
-  margin-bottom: 2rem;
-  list-style: none;
+.format-options {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background-color: rgba(233, 69, 96, 0.1);
+    border-radius: 10px;
 }
 
-.product-features li {
-  margin-bottom: 0.8rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
+.format-options h4 {
+    font-family: var(--fuente-Montserrat);
+    margin-bottom: 0.5rem;
+    color: var(--color-hover);
 }
 
-.product-features i {
-  color: var(--color-secundaria);
-  width: 20px;
-  text-align: center;
+.format-options ul {
+    list-style: none;
 }
 
+.format-options li {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.format-options .fa-check {
+    color: #4CAF50;
+}
 .all-products-carousel {
   margin-top: 4rem;
 }
@@ -708,7 +717,7 @@ body {
   line-height: 1.6;
 }
 
-.view-sizes-btn {
+.view-sizes-btn, .view-payment-btn {
   background-color: transparent;
   color: var(--color-hover);
   border: 2px solid var(--color-hover);
@@ -719,12 +728,12 @@ body {
   transition: all 0.3s ease;
 }
 
-.view-sizes-btn:hover {
+.view-sizes-btn:hover, .view-payment-btn:hover {
   background-color: var(--color-hover);
   color: var(--color-blanco);
 }
 
-.sizes-table-container {
+.sizes-table-container, .payment-table-container{
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 2rem;
@@ -733,46 +742,46 @@ body {
   animation: fadeIn 0.5s ease;
 }
 
-.sizes-table-container.show {
+.sizes-table-container.show, .payment-table-container.show{
   display: block;
 }
 
-.sizes-table-container h3 {
+.sizes-table-container h3, .payment-table-container h3 {
   font-family: var(--fuente-Montserrat);
   text-align: center;
   margin-bottom: 1.5rem;
   color: var(--color-secundaria);
 }
 
-.sizes-table {
+.sizes-table .payment-table {
   width: 100%;
   border-collapse: collapse;
   margin-bottom: 1rem;
 }
 
-.sizes-table th, .sizes-table td {
+.sizes-table th, .payment-table th, .sizes-table td, .payment-table td {
   padding: 1rem;
   text-align: center;
   border-bottom: 2px solid var(--color-neutro);
 }
 
-.sizes-table th {
+.sizes-table th, .payment-table th {
   background-color: var(--color-hover);
   color: var(--color-blanco);
   font-family: var(--fuente-Montserrat);
 }
 
-.sizes-table tr:hover {
+.sizes-table tr:hover, .payment-table tr:hover {
   background-color: rgba(175, 191, 212, 0.5);
 }
 
-.sizes-table tr:last-child td {
+.sizes-table tr:last-child td, .payment-table tr:last-child td {
   border-bottom: none;
 }
 
 .note {
   font-size: 0.8rem;
-  text-align: right;
+  text-align: left;
   color: var(--color-terciaria);
 }
 
@@ -823,6 +832,7 @@ body {
 
 .payment-methods {
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .payment-methods h4 {
@@ -1360,7 +1370,7 @@ body {
     flex-direction: column;
   }
 
-  .sizes-table {
+  .sizes-table, .payment-table {
     display: block;
     overflow-x: auto;
   }

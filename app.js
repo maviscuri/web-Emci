@@ -180,6 +180,7 @@ prevBtn.addEventListener("click", () => {
   productCarousel.scrollBy({ left: -300, behavior: "smooth" });
 });
 
+/* por AHORA NO ES NECESARIO
 // Navegación por categorías desde el carrusel
 const productCards = document.querySelectorAll(".product-card");
 productCards.forEach((card) => {
@@ -202,6 +203,7 @@ productCards.forEach((card) => {
       .scrollIntoView({ behavior: "smooth" });
   });
 });
+*/
 
 //sección ENCARGAR
 // Mostrar/ocultar tabla de dimensiones
@@ -214,6 +216,18 @@ function toggleSizesTable() {
     btn.textContent = "Ocultar dimensiones";
   } else {
     btn.textContent = "Ver dimensiones disponibles";
+  }
+}
+// Mostrar/ocultar tabla de medios de pago
+function togglePayTable() {
+  const sizesTable = document.getElementById("paymentTable");
+  paymentTable.classList.toggle("show");
+
+  const btn = document.querySelector(".view-payment-btn");
+  if (sizesTable.classList.contains("show")) {
+    btn.textContent = "Ocultar Medios de Pago";
+  } else {
+    btn.textContent = "Ver Medios de pago";
   }
 }
 
