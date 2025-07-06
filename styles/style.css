@@ -16,16 +16,16 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+html, body {
   overflow-x: hidden;
 }
-
 body {
   background-color: var(--color-blanco);
   color: var(--color-secundaria);
   font-family: var(--fuente-Alata);
   line-height: 1.6;
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 /* Header */
 .header {
@@ -940,6 +940,8 @@ body {
 .faq-answer ul, 
 .faq-answer ol {
   padding-left: 1.5rem;
+  list-style-type: disc;
+  /*list-style-position: inside;*/
 }
 
 .faq-answer li {
@@ -1378,7 +1380,7 @@ body {
   }
 
   .faq-question {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   .payment-icons {
     margin: auto 5rem;
