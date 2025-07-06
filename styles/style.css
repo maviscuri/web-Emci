@@ -16,6 +16,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -24,6 +25,7 @@ body {
   font-family: var(--fuente-Alata);
   line-height: 1.6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 /* Header */
 .header {
@@ -476,31 +478,31 @@ body {
 }
 
 .format-options {
-    margin: 1.5rem 0;
-    padding: 1rem;
-    background-color: rgba(233, 69, 96, 0.1);
-    border-radius: 10px;
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: rgba(250, 79, 108, 0.1);
+  border-radius: 15px;
 }
 
 .format-options h4 {
-    font-family: var(--fuente-Montserrat);
-    margin-bottom: 0.5rem;
-    color: var(--color-hover);
+  font-family: var(--fuente-Montserrat);
+  margin-bottom: 0.5rem;
+  color: var(--color-hover);
 }
 
 .format-options ul {
-    list-style: none;
+  list-style: none;
 }
 
 .format-options li {
-    margin-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .format-options .fa-check {
-    color: #4CAF50;
+  color: #4CAF50;
 }
 .all-products-carousel {
   margin-top: 4rem;
