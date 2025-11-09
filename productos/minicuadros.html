@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMCI | Arte personalizado</title>
+    <link rel="icon" href="../assets/mclogo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alata&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <img src="../assets/emci.png" alt="EMCI Arte" class="logo">
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="../index.html#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="../index.html#productos" class="nav-link">Productos</a></li>
+                    <li><a href="../index.html#encargos" class="nav-link">Encargar</a></li>
+                    <li><a href="../index.html#nosotros" class="nav-link">Nosotros</a></li>     
+                    <li><a href="../index.html#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="../index.html#instagram"><i class="fab fa-instagram"></i></a></li> 
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+        <div class="section-container">
+            <a href="../index.html">Inicio</a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="../index.html#productos">Productos</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="current">Mini Cuadros</span>
+        </div>
+    </nav>
+
+    <!-- Detalles del Producto -->
+    <section class="producto-detalle-page">
+        <div class="section-container">
+            <div class="producto-detalle-grid">
+                <!-- Galería -->
+                <div class="producto-galeria">
+                    <div class="galeria-principal">
+                        <img src="../assets/productos/cuadro10-1.png" alt="Mini Cuadro Personalizado" id="imagenPrincipal">
+                    </div>
+                    <div class="galeria-miniaturas">
+                        <div class="miniatura active" data-imagen="../assets/productos/cuadro10-1.png">
+                            <img src="../assets/productos/cuadro10-1.png" alt="Mini Cuadro 10x10">
+                        </div>
+                        <div class="miniatura" data-imagen="../assets/productos/cuadro7-1.png">
+                            <img src="../assets/productos/cuadro7-1.png" alt="Mini Cuadro 7x7">
+                        </div>
+                        <div class="miniatura" data-imagen="../assets/productos/cuadro7-2.png">
+                            <img src="../assets/productos/cuadro7-2.png" alt="Mini Cuadro 7x7">
+                        </div>
+                        <div class="miniatura" data-imagen="../assets/productos/cuadro7-3.png">
+                            <img src="../assets/productos/cuadro7-3.png" alt="Mini Cuadro 7x7">
+                        </div>
+                        <div class="miniatura" data-imagen="../assets/productos/circular10-1.png">
+                            <img src="../assets/productos/circular10-1.png" alt="Mini Cuadro circular">
+                        </div>
+                        <div class="miniatura" data-imagen="../assets/productos/circular10-2.png">
+                            <img src="../assets/productos/circular10-2.png" alt="Mini Cuadro circular">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Información del Producto -->
+                <div class="producto-info-detalle">
+                    <h1 class="producto-titulo">Mini Cuadros</h1>
+                    <p class="producto-descripcion">
+                        Retratos de mascotas, personajes, lugares y más. 100% pintado a mano
+                        en técnica acrílica sobre lienzo. 
+                        Pequeñas obras de arte perfectas para decorar escritorios o estanterías. 
+                        Cada pieza es pintada a mano con atención al detalle.
+                    </p>
+
+                    <div class="producto-incluye">
+                        <h3><i class="fas fa-gift"></i> ¿Qué incluye?</h3>
+                        <ul>
+                           <li><i class="fas fa-check"></i> Libertad en diseño (puedes agregar escenarios o ideas que tengas en mente)</li>
+                           <li><i class="fas fa-check"></i> Soporte de exhibición</li>
+                           <li><i class="fas fa-check"></i> Barnizado</li>
+                           <li><i class="fas fa-check"></i> Entrega en caja, ideal para regalar</li>
+                            <li><i class="fas fa-check"></i> Dedicatoria (opcional)</li>
+                        </ul>
+                    </div>
+
+                    <div class="selector-tamano">
+                        <h3><i class="fas fa-ruler-combined"></i> Selecciona el tamaño:</h3>
+                        <div class="tamano-opciones">
+                            <button class="tamano-btn" data-precio="desde S/ 38.00" data-tamano="7x7 cm">
+                                7x7 cm
+                                <span class="tamano-precio">desde S/ 38.00</span>
+                            </button>
+                            <button class="tamano-btn active" data-precio="desde S/ 40.00" data-tamano="10x10 cm">
+                                10x10 cm
+                                <span class="tamano-precio">desde S/ 40.00</span>
+                            </button>
+                            <button class="tamano-btn" data-precio="desde S/ 40.00" data-tamano="10 cm">
+                                10 cm diámetro
+                                <span class="tamano-precio">desde S/ 40.00</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="tiempo-entrega">
+                        <h4><i class="fas fa-clock"></i> Tiempo de elaboración</h4>
+                        <p> 10 días hábiles Aprox. + tiempo de envío</p>
+                    </div>
+                    <div class="proceso-reserva">
+                        <h4><i class="fas fa-chack-circle"></i> Proceso de reserva:</h4>
+                        <p> - El diseño se agenda una vez recibido el 50% o el pago total <br>
+                         - Junto al cliente se definen los detalles de la obra <br>
+                         - Previo a iniciar la pintura se entrega un bosquejo para la conformidad del cliente 
+                        </p>
+                    </div>
+                    <div class="producto-actions">
+                        <button class="cta-button whatsapp-btn" onclick="encargarPorWhatsApp()">
+                            <i class="fab fa-whatsapp"></i>
+                            Consultar por WhatsApp
+                        </button>
+                    </div>
+
+                    <div class="producto-garantia">
+                        <div class="garantia-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Garantía de satisfacción</span>
+                        </div>
+                        <div class="garantia-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Envíos a todo el Perú</span>
+                        </div>
+                        <div class="garantia-item">
+                            <i class="fas fa-credit-card"></i>
+                            <span>Múltiples métodos de pago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Productos Similares -->
+            <div class="productos-similares-section">
+                <h2>Productos Relacionados</h2>
+                <div class="similares-grid">
+                    <a href="llaveros.html" class="producto-card-similar">
+                        <div class="card-image">
+                            <img src="../assets/productos/llaveros1.png" alt="Llaveros Personalizados">
+                        </div>
+                        <div class="card-content">
+                            <h3>Llaveros</h3>
+                            <p>Desde S/ 20.00</p>
+                        </div>
+                    </a>
+
+                    <a href="separadores.html" class="producto-card-similar">
+                        <div class="card-image">
+                            <img src="../assets/productos/separadores1.png" alt="Separadores de Libros">
+                        </div>
+                        <div class="card-content">
+                            <h3>Separadores</h3>
+                            <p>Desde S/ 10.00</p>
+                        </div>
+                    </a>
+
+                    <a href="cuadros-medianos.html" class="producto-card-similar">
+                        <div class="card-image">
+                            <img src="../assets/productos/cuadro-mediano1.png" alt="Cuadros Medianos">
+                        </div>
+                        <div class="card-content">
+                            <h3>Cuadros Medianos</h3>
+                            <p>Desde S/ 55.00</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-contacto" id="contacto">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Columna de información de contacto -->
+                <div class="footer-col">
+                    <h3 class="footer-title">EMCI Arte </h3>
+                    <p class="footer-text">Transformando tus recuerdos en obras de arte únicas, hechas a mano con
+                        dedicación y amor.</p>
+
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+51 961 671 940</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chincha, Ica, Perú</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Columna de enlaces rápidos -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html#inicio">Inicio</a></li>
+                        <li><a href="../index.html#productos">Productos</a></li>
+                        <li><a href="../index.html#encargos">Cómo encargar</a></li>
+                        <li><a href="../index.html#nosotros">Nosotros</a></li>                    
+                    </ul>
+                </div>
+
+                <!-- Columna de redes sociales -->
+                <div class="footer-col">
+                    <h3 class="footer-title">Sígueme</h3>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/emci.arte/" target="_blank" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@emci.art/" target="_blank" class="social-link tiktok">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://wa.me/51961671940" target="_blank" class="social-link whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Botón flotante de WhatsApp -->
+            <a href="https://wa.me/51961671940" target="_blank" class="whatsapp-float">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+
+            <!-- Derechos de autor -->
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 EMCI Arte. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/productos.js"></script>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

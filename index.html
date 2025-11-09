@@ -15,622 +15,580 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <header class="header">
-            <div class="logo">EMCI</div>
-            <div class="hamburger" id="hamburger" onclick="toggleMenu()">&#9776;</div>
-            <nav class="header__menu" id="navLinks">
-                <a href="#inicio">Inicio</a>
-                <a href="#about">Nosotros</a>
-                <a href="#productos">Categoría</a>
-                <a href="#encargar">Encargar</a>
-                <a href="#contacto">Contacto</a>
+    <!-- Header Sticky -->
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="index.html">
+                <img src="./assets/emci.png" alt="EMCI Arte" class="logo">
+                </a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#inicio" class="nav-link active">Inicio</a></li>
+                    <li><a href="#productos" class="nav-link">Productos</a></li>
+                    <li><a href="#encargos" class="nav-link">Encargar</a></li>
+                    <li><a href="#nosotros" class="nav-link">Nosotros</a></li>     
+                    <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                    <li><a href="#instagram"><i class="fab fa-instagram"></i></a></li> 
+                </ul>
+
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
-        </header>
-        <main>
-            <section class="inicio" id="inicio">
-                <div class="inicio__contenido">
-                    <h1 class="inicio__contenido__titulo">
-                        <span class="brand">EMCI</span>
-                        <span class="highlight">Arte personalizado</span>
-                    </h1>
-                    <p class="inicio__contenido__texto">
-                        Cuadros, llaveros, bookmarks y más... todo pintado a mano, para que tu recuerdo se vuelva arte.
-                    </p>
-                    <a href="#encargar" class="cta-button">Encarga tu obra</a>
+        </div>
+    </header>
+    <!-- hero Section -->
+    <section class="hero" id="inicio">
+        <div class="carousel">
+            <div class="carousel-track">
+                <div class="carousel-slide active">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/banner-mobile-navidad.png">
+                        <source media="(max-width: 1200px)" srcset="./assets/banner-tablet-navidad.png">
+                        <img src="./assets/banner-web-navidad.png" alt="Regala Arte esta navidad"
+                            class="carousel-image">
+                    </picture>
                 </div>
-                <div class="scroll-indicator">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div class="carousel-slide">
+                    <picture>
+                        <source media="(max-width: 768px)" srcset="./assets/banner-mobile-general.png">
+                        <source media="(max-width: 1200px)" srcset="./assets/banner-tablet-general.png">
+                        <img src="./assets/banner-web-general.png" alt="Obras de Arte Personalizadas"
+                            class="carousel-image">
+                    </picture>
                 </div>
-            </section>
-        </main>
-    </div>
-    <section class="about" id="about">
-        <div class="section-container">
-            <div class="about__contenido">
-                <div class="about__texto">
-                    <h2 class="about__section-title">Bienvenido a EMCI</h2>
-                    <p class="about__section-subtitle">En EMCI damos vida a tus recuerdos a través del arte. 
-                        Retratamos mascotas, momentos especiales o personajes favoritos en piezas hechas a mano, 
-                        perfectas para atesorar o regalar con emoción.
-                    </p>
-                </div>
-                <div class="about__gallery">
-                    <div class="gallery-container">
-                        <img class="gallery-img active" src="./assets/about1.jpg" alt="Foto">
-                        <img class="gallery-img" src="./assets/about2.jpg" alt="foto">
-                    </div>
-                    <div class="gallery-controls">
-                        <button class="gallery-prev"><i class="fas fa-chevron-left"></i></button>
-                        <div class="gallery-dots">
-                            <span class="dot active"></span>
-                            <span class="dot"></span>
-                        </div>
-                        <button class="gallery-next"><i class="fas fa-chevron-right"></i></button>
-                    </div>
-                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <button class="carousel-control prev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+
+            <!-- Carousel Dots -->
+            <div class="carousel-dots">
+                <span class="dot active" data-slide="0"></span>
+                <span class="dot" data-slide="1"></span>
+            </div>
+
+            <!-- CTA Button -->
+            <div class="hero-cta">
+                <a href="#productos" class="cta-button">
+                    <span>Ver Productos</span>
+                    <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
         </div>
     </section>
-    <section class="productos" id="productos">
+    <!-- Productos Section -->
+    <section class="productos-formatos" id="productos">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="productos__section-title">Categorías de Productos</h2>
-                <p class="productos__section-subtitle">Selecciona una categoría para ver los formatos disponibles</p>
+                <h2 class="section-title">Nuestros Formatos</h2>
+                <p class="section-subtitle">Elige el formato perfecto para tu obra de arte personalizada</p>
             </div>
-            <!-- Pestañas de categorías -->
-            <div class="categories-tabs">
-                <div class="tab-buttons">
-                    <button class="tab-btn active" data-category="mascotas">Mascotas</button>
-                    <button class="tab-btn" data-category="personajes">Personajes</button>
-                    <button class="tab-btn" data-category="variado">Arte Libre</button>
-                    <button class="tab-btn" data-category="fotos">Fotos</button>
-                </div>
-            </div>
-            <div class="tab-contents">
-                <!-- categoría mascotas -->
-                <div class="tab-content active" id="mascotas">
-                    <div class="product-detail">
-                        <div class="product-gallery">
-                            <div class="main-image">
-                                <img src="./assets/mascota.jpg" alt="retrato mascota" class="active">
-                                <img src="./assets/2mascotas.jpg" alt="retrato de dos mascotas">
-                                <img src="./assets/llavero1.jpg" alt="llavero de mascota Berlin">
-                                <img src="./assets/llavero2.jpg" alt="llavero de mascota Haku">
-                                <img src="./assets/minicuadro2.jpg" alt="mini cuadro de mascota">
-                                <img src="./assets/formascotas.png" alt="formatos para categoría mascotas">
-                            </div>
-                            <div class="thumbnails">
-                                <img src="./assets/mascota.jpg" alt="retrato mascota" class="active">
-                                <img src="./assets/2mascotas.jpg" alt="retrato de dos mascotas">
-                                <img src="./assets/llavero1.jpg" alt="llavero de mascota Berlin">
-                                <img src="./assets/llavero2.jpg" alt="llavero de mascota Haku">
-                                <img src="./assets/minicuadro2.jpg" alt="mini cuadro de mascota">
-                                <img src="./assets/formascotas.png" alt="formatos para categoría mascotas">
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Retratos de Mascotas</h3>
-                            <p class="product-description">
-                                Captura la personalidad de tu compañero peludo en una obra de arte única. Trabajamos con
-                                fotos de perros, gatos y otras mascotas
-                            </p>
-                            <div class="format-options">
-                                <h4>Formatos disponibles:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Llavero acrílico circular (Ø5 cm)</li>
-                                    <li><i class="fas fa-check"></i> Mini cuadros (7x7 cm - 10x10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Mini cuadro circular de madera (Ø10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Lienzos rectangulares pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzos cuadrados pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzo circular mediano</li>
-                                </ul>
-                            </div>
-                            <a href="#encargar" class="cta-button">Encargar ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- personajes -->
-                <div class="tab-content" id="personajes">
-                    <div class="product-detail">
-                        <div class="product-gallery">
-                            <div class="main-image">
-                                <img src="./assets/minicuadroLZ.jpg" alt="ini cuadro Luffy y Zoro" class="active">
-                                <img src="./assets/minicuadrorocket.png" alt="Mini cuadro Rocket y Groot">
-                                <img src="./assets/chopper.jpg" alt="cuadro de chopper">
-                                <img src="./assets/personaje1.jpg" alt="cuadro G. Cerati">
-                                <img src="./assets/forpersonaje.png" alt="formato para personajes">
-                            </div>
-                            <div class="thumbnails">
-                                <img src="./assets/minicuadroLZ.jpg" alt="ini cuadro Luffy y Zoro" class="active">
-                                <img src="./assets/minicuadrorocket.png" alt="Mini cuadro Rocket y Groot">
-                                <img src="./assets/chopper.jpg" alt="cuadro de chopper">
-                                <img src="./assets/personaje1.jpg" alt="cuadro G. Cerati">
-                                <img src="./assets/forpersonaje.png" alt="formato para personajes">
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Cuadros de Personajes</h3>
-                            <p class="product-description">
-                                Tus favoritos en versiones pintadas a mano. Ideal para fans de anime, series, películas
-                                o música.
-                            </p>
-                            <div class="format-options">
-                                <h4>Formatos disponibles:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Mini cuadros (7x7 cm - 10x10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Mini cuadro circular de madera (Ø10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Lienzos rectangulares pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzos cuadrados pequeños, medianos y grandes<li>
-                                    <li><i class="fas fa-check"></i> Lienzo circular mediano</li>
-                                </ul>
-                            </div>
-                            <a href="#encargar" class="cta-button">Encargar ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- arte variado -->
-                <div class="tab-content" id="variado">
-                    <div class="product-detail">
-                        <div class="product-gallery">
-                            <div class="main-image">
-                                <img src="./assets/libre1.jpg" alt="cuadro chica y rosas" class="active">
-                                <img src="./assets/libre2.jpg" alt="cuadro de corazon">
-                                <img src="./assets/libre3.jpg" alt="cuadro de paisaje chino">
-                                <img src="./assets/paisajecircular.jpg" alt="cuadro de paisaje playa">
-                                <img src="./assets/bookmark1.jpg" alt="Separador Almond Blossom">
-                                <img src="./assets/forvariado.png" alt="formato para arte variado">
-                            </div>
-                            <div class="thumbnails">
-                                <img src="./assets/libre1.jpg" alt="cuadro chica y rosas" class="active">
-                                <img src="./assets/libre2.jpg" alt="cuadro de corazon">
-                                <img src="./assets/libre3.jpg" alt="cuadro de paisaje chino">
-                                <img src="./assets/paisajecircular.jpg" alt="cuadro de paisaje playa">
-                                <img src="./assets/bookmark1.jpg" alt="Separador Almond Blossom">
-                                <img src="./assets/forvariado.png" alt="formato para arte variado">
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Arte variado</h3>
-                            <p class="product-description">
-                                Dale un toque personal a tus lecturas con estos separadores artesanales. Pintados a mano
-                                sobre
-                                cartulina de alta calidad. Cada diseño es único y puede incluir citas o nombres
-                                personalizados.
-                            </p>
-                            <div class="format-options">
-                                <h4>Formatos disponibles:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Mini cuadros (7x7 cm - 10x10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Mini cuadro circular de madera (Ø10 cm)</li>
-                                    <li><i class="fas fa-check"></i> Lienzos rectangulares pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzos cuadrados pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzo circular mediano</li>
-                                    <li><i class="fas fa-check"></i> Separadores de libro (5x15 cm)</li>
-                                </ul>
-                            </div>
-                            <a href="#encargar" class="cta-button">Encargar ahora</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cuadros de fotos-->
-                <div class="tab-content" id="fotos">
-                    <div class="product-detail">
-                        <div class="product-gallery">
-                            <div class="main-image">
-                                <img src="./assets/foto1.jpg" alt="cuadro de paisaje y pareja" class="active">
-                                <img src="./assets/foto2.jpg" alt="cuadro de paisaje y chica de espalda">
-                                <img src="./assets/foto3.jpg" alt="cuadro de recuerdo">
-                                <img src="./assets/forfotos.png" alt="formato para fotos">
-                            </div>
-                            <div class="thumbnails">
-                                <img src="./assets/foto1.jpg" alt="cuadro de paisaje y pareja" class="active">
-                                <img src="./assets/foto2.jpg" alt="cuadro de paisaje y chica de espalda">
-                                <img src="./assets/foto3.jpg" alt="cuadro de recuerdo">
-                                <img src="./assets/forfotos.png" alt="formato para fotos">
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <h3>Cuadros de momentos especiales</h3>
-                            <p class="product-description">
-                                Convierte tus recuerdos fotográficos en pinturas con alma. Perfecto para capturar
-                                paisajes o momentos especiales.
-                            </p>
-                            <div class="format-options">
-                                <h4>Formatos disponibles:</h4>
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Lienzos rectangulares pequeños, medianos y grandes </li>
-                                    <li><i class="fas fa-check"></i> Lienzos cuadrados pequeños, medianos y grandes</li>
-                                    <li><i class="fas fa-check"></i> Lienzo circular mediano</li>
-                                </ul>
-                            </div>
-                            <a href="#encargar" class="cta-button">Encargar ahora</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--carousel de productos-->
-        <div class="all-products-carousel">
-            <h3 class="carousel-title">Explora todos nuestros productos</h3>
-            <div class="carousel-container">
-                <button class="carousel-btn prev"><i class="fas fa-chevron-left"></i></button>
-                <div class="product-carousel">
-                    <div class="product-card" data-category="cuadros">
-                        <div class="card-image">
-                            <img src="./assets/minicuadroLZ.jpg" alt="Mini cuadro">
-                        </div>
-                        <h4>Mini Cuadros</h4>
-                        <p class="card-description">Pequeñas obras de arte para decorar cualquier espacio.</p>
-                    </div>
 
-                    <div class="product-card" data-category="llaveros">
-                        <div class="card-image">
-                            <img src="./assets/llavero1.jpg" alt="Llavero personalizado">
+            <div class="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card" data-category="llaveros">
+                    <a href="productos/llaveros.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/llaveros1.png" alt="Llaveros Personalizados">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
                         </div>
-                        <h4>Llaveros de mascotas</h4>
-                        <p class="card-description">Retratos de tu mascota en miniatura. Llévalo siempre contigo.</p>
                     </div>
-
-                    <div class="product-card" data-category="separadores">
-                        <div class="card-image">
-                            <img src="./assets/bookmark1.jpg" alt="Bookmark Almond Blossom">
-                        </div>
-                        <h4>Bookmarks</h4>
-                        <p class="card-description">Separadores de libro con arte hecho a mano. Un detalle que
-                            acompaña cada lectura.</p>
+                    <div class="card-content">
+                        <h3 class="card-title">Llaveros</h3>
+                        <p class="card-description">Lleva tus recuerdos contigo a todas partes</p>
+                        <div class="precio-mini">Desde S/ 20.00</div>
                     </div>
-
-                    <div class="product-card" data-category="cuadrosR">
-                        <div class="card-image">
-                            <img src="./assets/foto1.jpg" alt="foto pareja">
-                        </div>
-                        <h4>Lienzos Rectangulares</h4>
-                        <p class="card-description">Tu obra de arte en versiones rectangulares.</p>
-                    </div>
-
-                    <div class="product-card" data-category="cuadrosC">
-                        <div class="card-image">
-                            <img src="./assets/mascotazayet.jpg" alt="cuadro de mascota">
-                        </div>
-                        <h4>Lienzos Cuadrados</h4>
-                        <p class="card-description">Tu obra de arte en versiones cuadradas.</p>
-                    </div>
-
-                    <div class="product-card" data-category="cuadrosCC">
-                        <div class="card-image">
-                            <img src="./assets/paisajecircular.jpg" alt="paisaje playa">
-                        </div>
-                        <h4>Cuadros Circulares</h4>
-                        <p class="card-description">Tu obra de arte en versiones circulares.</p>
-                    </div>
-
-                    <div class="product-card" data-category="Mini cuadro circular">
-                        <div class="card-image">
-                            <img src="./assets/minicircular.png" alt="Mini lienzo circular">
-                        </div>
-                        <h4>Mini cuadro circular</h4>
-                        <p class="card-description">Pequeñas obras de arte en formato circular, para decorar cualquier espacio.</p>
-                    </div>
+                    </a>
                 </div>
-                <button class="carousel-btn next"><i class="fas fa-chevron-right"></i></button>
+
+                <!-- Producto 2 -->
+                <div class="producto-card" data-category="mini-cuadros">
+                    <a href="productos/minicuadros.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/cuadro10-1.png" alt="Mini Cuadros Personalizados">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Mini Cuadros</h3>
+                        <p class="card-description">Pequeñas obras de arte perfectas para decorar cualquier espacio</p>
+                         <div class="precio-mini">Desde S/ 38.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto-card" data-category="cuadros-pequeños">
+                    <a href="productos/cuadros-peques.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/cuadro-peque1.png" alt="Cuadros pequeños">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cuadros Pequeños</h3>
+                        <p class="card-description">Detalles con encanto para rincones acogedores</p>
+                        <div class="precio-mini">Desde S/ 45.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card" data-category="cuadros-medianos">
+                    <a href="productos/cuadros-medianos.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/cuadro-mediano1.png" alt="Cuadros Medianos">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cuadros Medianos</h3>
+                        <p class="card-description">Ideales para salas y dormitorios, con presencia y detalle</p>
+                        <div class="precio-mini">Desde S/ 55.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="producto-card" data-category="cuadros-circulares">
+                    <a href="productos/cuadro-circular.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/cuadro-circular1.png" alt="Cuadros circulares">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cuadro Circular</h3>
+                        <p class="card-description">Un toque original que armoniza tu ambiente </p>
+                        <div class="precio-mini">Desde S/ 60.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="producto-card" data-category="cuadros-grandes">
+                    <a href="productos/cuadros-grandes.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/cuadro-grande-decorativo1.png" alt="Cuadros Grandes">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cuadros Grandes</h3>
+                        <p class="card-description">Obras impactantes para espacios amplios</p>
+                        <div class="precio-mini">Desde S/ 70.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="producto-card" data-category="enmarcados">
+                    <a href="productos/enmarcados.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/portarretrato1.png" alt="Portarretratos Personalizados">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Cuadros enmarcados</h3>
+                        <p class="card-description">Recuerdos especiales enmarcados con encanto y calidez</p>
+                        <div class="precio-mini">Desde S/ 55.00</div>
+                    </div>
+                    </a>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="producto-card" data-category="separadores">
+                    <a href="productos/separadores.html" class="producto-card">
+                    <div class="card-image">
+                        <img src="./assets/productos/separadores1.png" alt="Separadores de Libros">
+                        <div class="card-overlay">
+                            <i class="fas fa-search-plus"></i>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <h3 class="card-title">Separadores</h3>
+                        <p class="card-description">Acompaña tus lecturas con arte personalizado</p>
+                        <div class="precio-mini">Desde S/ 10.00</div>
+                    </div>
+                    </a>
+                </div>
+
             </div>
         </div>
     </section>
-    <section id="encargar" class="encargo-section">
+
+    <!-- Encargar -->
+    <section class="como-encargar" id="encargos">
         <div class="section-container">
             <div class="section-header">
-                <h2 class="section-title">¿Cómo encargar tu arte personalizado?</h2>
-                <p class="section-subtitle">Sigue estos sencillos pasos para convertir tus recuerdos en obras de arte
-                    únicas</p>
+                <h2 class="section-title">¿Cómo Encargar tu Arte?</h2>
+                <p class="section-subtitle">Sigue estos simples pasos para transformar tus ideas en obras de
+                    arte únicas</p>
             </div>
 
-            <div class="encargo-steps">
+            <div class="pasos-grid">
                 <!-- Paso 1 -->
-                <div class="step-card">
-                    <div class="step-number">
-                        <span>1</span>
+                <div class="paso-card">
+                    <div class="paso-numero">01</div>
+                    <div class="paso-content">
+                        <h3>Elige tu Producto</h3>
+                        <p>Selecciona el formato que más te guste: mini cuadros, cuadros, llaveros, enmarcados o
+                            separadores.</p>
+                        <div class="paso-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
                     </div>
-                    <div class="step-content">
-                        <h3>Elige tu producto <i class="fas fa-palette"></i></h3>
-                        <p>Selecciona entre mini cuadros, cuadros, llaveros o separadores de libro.</p>
-                        <button class="view-sizes-btn" onclick="toggleSizesTable()">Ver formatos disponibles</button>
-                    </div>
-                </div>
-
-                <!-- Tabla de dimensiones (inicialmente oculta) -->
-                <div class="sizes-table-container" id="sizesTable">
-                    <h3>Dimensiones estándar de cuadros</h3>
-                    <table class="sizes-table">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Dimensiones (cm)</th>
-                                <th>Recomendación</th>
-                                <th>Precios desde</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Mini cuadros <br> (Con soporte)</td>
-                                <td>7 × 7 <br> 10 × 10 <br> Ø10 cm</td>
-                                <td>Perfecto para escritorios</td>
-                                <td>S/. 35</td>
-                            </tr>
-                            <tr>
-                                <td>Pequeño</td>
-                                <td>12 x 18 <br> 15 x 20 <br>20 × 20 <br> 25 x 25<br> 20 x 30</td>
-                                <td>Para espacios reducidos</td>
-                                <td>S/. 38</td>
-                            </tr>
-                            <tr>
-                                <td>Mediano</td>
-                                <td>30 × 30 <br> 30 x 35 <br>30 × 40 </td>
-                                <td>Salas o dormitorios</td>
-                                <td>S/. 50</td>
-                            </tr>
-                            <tr>
-                                <td>Grande</td>
-                                <td>40 x 50 <br>40 x 60 <br> 60 x 50 <br>60 × 80 <br> 80 x 90 <br> 100 x 80</td>
-                                <td>Punto focal en paredes</td>
-                                <td>S/. 70</td>
-                            </tr>
-                            <tr>
-                                <td>Circular</td>
-                                <td>30 Ø</td>
-                                <td>Salas o dormitorios</td>
-                                <td>S/. 50</td>
-                            </tr>
-                            <tr>
-                                <td>Personalizado</td>
-                                <td>A medida</td>
-                                <td>Según tus necesidades</td>
-                                <td>Consultar</td>
-                            </tr>
-                            <tr>
-                                <td>Llaveros</td>
-                                <td>5 Ø</td>
-                                <td>Bolsos o mochilas</td>
-                                <td>S/. 18</td>
-                            </tr>
-                            <tr>
-                                <td>Bookmarks</td>
-                                <td>5 x 15</td>
-                                <td>Libros</td>
-                                <td>S/. 7 <br> 5unid a S/. 30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="note">* Precio base. Los precios pueden variar según el tamaño y complejidad del diseño</p>
                 </div>
 
                 <!-- Paso 2 -->
-                <div class="step-card">
-                    <div class="step-number">
-                        <span>2</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Envía tu foto <i class="fas fa-camera-retro"></i></h3>
-                        <p>Comparte la imagen de referencia que quieres que transformemos en arte.</p>
-                        <div class="contact-buttons">
-                            <a href="https://wa.me/51961671940" class="whatsapp-btn">
-                                <i class="fab fa-whatsapp"></i> Contactar por WhatsApp
-                            </a>
-                            <a href="https://instagram.com/emci.arte/" class="instagram-btn">
-                                <i class="fab fa-instagram"></i> Contactar por Instagram
-                            </a>
+                <div class="paso-card">
+                    <div class="paso-numero">02</div>
+                    <div class="paso-content">
+                        <h3>Envía tu Referencia</h3>
+                        <p>Comparte las fotos o imágenes que quieres que transformemos en arte por WhatsApp o
+                            Instagram.</p>
+                        <div class="paso-icon">
+                            <i class="fas fa-camera-retro"></i>
                         </div>
                     </div>
                 </div>
 
                 <!-- Paso 3 -->
-                <div class="step-card">
-                    <div class="step-number">
-                        <span>3</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Confirma tu encargo <i class="fas fa-handshake"></i></h3>
-                        <p>Una vez definidos los detalles, confirma tu pedido con un adelanto del 50% del valor total.
-                        </p>
-                        <div class="payment-methods">
-                            <h4>Métodos de pago:</h4>
-                            <div class="payment-icons">
-                                <i class="fas fa-money-bill-wave" title="Depósito"></i>
-                                <i class="fa fa-mobile" title="billetera digital"></i>
-                                <i class="fa fa-credit-card" title="Transferencia"></i>  
-                            </div>
+                <div class="paso-card">
+                    <div class="paso-numero">03</div>
+                    <div class="paso-content">
+                        <h3>Confirma tu Pedido</h3>
+                        <p>Realiza un adelanto del 50% para confirmar y programar la elaboración de tu obra.
+                            Los pagos se coordinan por medio de nuestro WhatsApp.</p>
+                        <div class="paso-icon">
+                            <i class="fas fa-handshake"></i>
                         </div>
-                        <button class="view-payment-btn" onclick="togglePayTable()">Ver Medios de pago</button>
                     </div>
                 </div>
-                <div class="payment-table-container" id="paymentTable">
-                    <h3>Medios de Pago</h3>
-                    <table class="payment-table">
-                        <thead>
-                            <tr>
-                                <th>Transacción</th>
-                                <th>Entidad</th>
-                                <th>Número</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Billetera digital</td>
-                                <td>Yape (Otros bancos - Pichincha)</td>
-                                <td>+51 961 671 940</td>
-                            </tr>
-                            <tr>
-                                <td>Transferencia <br> Depósito</td>
-                                <td>BCP <br> <br> BBVA <br> <br> Interbank</td>
-                                <td>315 053 86188 090 <br> <br> 0011-0814-0256840311 <br> <br>898 3278016198</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <p class="note"> Titular: Maria V. Curi D.</p>
-                </div>
+
                 <!-- Paso 4 -->
-                <div class="step-card">
-                    <div class="step-number">
-                        <span>4</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Recibe una vista previa <i class="fas fa-eye"></i></h3>
-                        <p>Antes de finalizar, te enviaré una imagen del trabajo.</p>
+                <div class="paso-card">
+                    <div class="paso-numero">04</div>
+                    <div class="paso-content">
+                        <h3>Recibe Vista Previa</h3>
+                        <p>Te enviaremos una foto del progreso antes de finalizar para asegurarnos que sea
+                            perfecto.</p>
+                        <div class="paso-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Paso 5 -->
-                <div class="step-card">
-                    <div class="step-number">
-                        <span>5</span>
-                    </div>
-                    <div class="step-content">
-                        <h3>Entrega final <i class="fas fa-truck"></i></h3>
-                        <p>Completa el pago del saldo restante y recibe tu obra. Ofrecemos:</p>
-                        <ul class="delivery-options">
-                            <li><i class="fas fa-shipping-fast"></i> Envíos a nivel nacional por agencias</li>
-                            <li><i class="fas fa-hand-holding-heart"></i> Entrega en la ciudad de Chincha Alta</li>
-                        </ul>
+                <div class="paso-card">
+                    <div class="paso-numero">05</div>
+                    <div class="paso-content">
+                        <h3>Entrega Final</h3>
+                        <p>Completa el pago y recibe tu obra terminada. ¡Envíos a todo el Perú!</p>
+                        <div class="paso-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
                     </div>
                 </div>
             </div>
-<!--PREGUNTAS FRECUENTES-->
-            <div class="faq-section">
-                <h3>Preguntas frecuentes</h3>
-                <div class="faq-item">
-                    <button class="faq-question">¿Cuánto tiempo toma mi encargo?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>El tiempo de elaboración varía según la complejidad de la obra y formato, por lo general de 5 días a más, pero ten en cuenta que:</p>
-                            <ul>
-                                <li><strong>No realizamos entregas de un día para otro</strong> </li>
-                                <li> Cada obra requiere el tiempo necesario para garantizar calidad.</li>
-                                <li>En caso que se tenga agenda llena, te indicaremos las fechas probables de entrega, sin embargo,
-                                    si requieres con urgencia un encargo, es importante que nos lo hagas saber.
-                                </li>
-                                <li>Para envíos, el tiempo de llegada de cada agencia es variable, aún así hacemos seguimiento de tu pedido.</li>
-                            </ul>
+
+            <div class="cta-encargos">
+                <a href="https://wa.me/51961671940" class="cta-button whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Comenzar mi Encargo
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección About Me -->
+    <section class="about-me" id="nosotros">
+        <div class="section-container">
+            <div class="about-grid">
+                <div class="about-content">
+                    <div class="texto-degradado">
+                        <h2 class="about-title">Sobre EMCI</h2>
+                        <p class="about-text">
+                            EMCI nació del amor por el arte y por las mascotas. Cada retrato es una forma de honrar ese
+                            vínculo único que nos une a quienes amamos. Pinto a mano cada detalle con dedicación,
+                            buscando capturar no solo la apariencia, sino la esencia y la emoción detrás de cada mirada.
+                            Con el tiempo, también he explorado retratos de personas y otros cuadros decorativos,
+                            siempre con el deseo de seguir aprendiendo y perfeccionando mi arte. <br>
+                            Ya sea un detalle para ti o para alguien especial cada pintura es una manera única de
+                            celebrar los lazos que nos inspiran y de llenar tu hogar con belleza, amor y significado.
+                        </p>
+                        <div class="about-signature">
+                            <span>Mavis C.</span>
+                            <strong> EMCI Arte</strong>
                         </div>
                     </div>
                 </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Puedo pedir dimensiones diferentes a las estándar?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Sí, las mencionadas en la sección anterior son las más frecuentes, pero trabajamos con más
-                            medidas de lienzos. El precio se ajustará según el tamaño solicitado.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Qué tipo de fotos debo enviar?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Según la categoría elegida las imágenes deben tener buena resolución e iluminación (no fotos borrosas o con excesivas
-                            sombras) en el caso de retratos. La foto enviada se ajustará a la medida solicitada.</p>
-                        </div>  
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Qué técnicas artísticas utilizan?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Trabajamos principalmente con dos técnicas profesionales:</p>
-                            <ul>
-                                <li><strong>Acrílico sobre lienzo:</strong> Pintura de secado rápido con colores vibrantes y
-                                    duraderos.</li>
-                                <li><strong>Óleo sobre lienzo:</strong> Técnica tradicional que permite mayor blending y
-                                    profundidad de
-                                    colores.</li>
-                            </ul>
-                            <p>Puedes especificar tu preferencia al hacer el encargo.</p>
-                        </div> 
-                    </div>
-                </div>
-            
-                <div class="faq-item">
-                    <button class="faq-question">¿Cómo elijo entre acrílico y óleo?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Te recomendamos considerar estos factores:</p>
-                            <table class="technique-comparison">
-                                <tr>
-                                    <th>Característica</th>
-                                    <th>Acrílico</th>
-                                    <th>Óleo</th>
-                                </tr>
-                                <tr>
-                                    <td>Tiempo de secado</td>
-                                    <td>Rápido (horas)</td>
-                                    <td>Lento (días/semanas)</td>
-                                </tr>
-                                <tr>
-                                    <td>Apariencia</td>
-                                    <td>Colores vibrantes</td>
-                                    <td>Profundidad</td>
-                                </tr>
-                                <tr>
-                                    <td>Durabilidad</td>
-                                    <td>Excelente</td>
-                                    <td>Excelente (con cuidado)</td>
-                                </tr>
-                                <tr>
-                                    <td>Recomendado para</td>
-                                    <td>Encargos con tiempo limitado</td>
-                                    <td>Obras clásicas/detalladas <br> Retratos de personas</td>
-                                </tr>
-                            </table>
-                        </div>  
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Puedo cancelar mi pedido?<i class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Nuestra política de cancelación es la siguiente:</p>
-                            <ul>
-                                <li>Aceptamos cancelaciones sólo durante las primeras 24-48 horas después de confirmado el
-                                    pedido.</li>
-                                <li>La cancelación será posible únicamente si no hemos iniciado el trabajo en tu obra.</li>
-                                <li>Si ya hemos comenzado con tu pieza, no podremos procesar la cancelación pero podemos
-                                    discutir modificaciones.</li>
-                                <li>En caso de cancelación aprobada, el adelanto será reembolsado menos un 10% por gastos
-                                    administrativos.</li>
-                            </ul>
-                        </div> 
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Qué información debo proporcionar para mi encargo?<i
-                            class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Para garantizar el mejor resultado, necesitamos:</p>
-                            <ol>
-                                <li>Formato, tamaño y técnica preferida (acrílico/óleo)</li>
-                                <li>Fotos de referencia claras. Para 'fotos' debe proporcionar una imagen nítida, si es de 'personas' la foto de referencia debe ser sólo una.</li>
-                                <li>Fecha esperada de entrega (Le confirmaremos el tiempo estimado de su encargo)</li>
-                                <li>Detalles especiales (fondos, colores predominantes, nombre o frase)</li>
-                                <p class="note">Nota: En la categoría "Fotos" solo se permiten cambios mínimos, como ajustes de color. No realizamos ediciones mayores como agregar personas, modificar rasgos o alterar elementos de la imagen original.</p>
-                            </ol>
-                        </div>  
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <button class="faq-question">¿Puedo encargar un retrato de personas uniendo varias fotos?<i
-                            class="fas fa-chevron-down"></i></button>
-                    <div class="faq-answer">
-                        <div class="faq-answer-content">
-                            <p>Por el momento, los retratos de personas solo se realizan a partir de una sola foto de referencia, sin combinar imágenes distintas.
-                            Sabemos lo valioso que es crear recuerdos con personas queridas que ya no están cerca, sin embargo, actualmente no ofrecemos el servicio de unión de varias fotos.
-                            </p>
-                        </div>  
+
+                <div class="about-image">
+                    <div class="image-container">
+                        <img src="./assets/artista.jpg" alt="Artista de EMCI Arte">
+                        <div class="image-frame"></div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Sección Síguenos en Instagram -->
+    <section class="instagram-section" id="instagram">
+        <div class="section-container">
+            <div class="instagram-header">
+                <div class="instagram-intro">
+                    <h2 class="section-title">Síguenos en Instagram</h2>
+                    <p class="section-subtitle">Mantente al día con nuestros últimos trabajos y comparte tus
+                        obras usando</p>
+                    <div class="hashtag">#EMCIArte</div>
+                    <a href="https://www.instagram.com/emci.arte/" class="instagram-follow-btn">
+                        <i class="fab fa-instagram"></i>
+                        Seguir en Instagram
+                    </a>
+                </div>
+            </div>
+
+            <div class="instagram-gallery">
+                <!-- Post 1 -->
+                <a href="https://www.instagram.com/p/C9JHGypuyy5/" class="instagram-post" target="_blank">
+                    <img src="./assets/instagram/llaveroIG.jpeg" alt="Obra de arte EMCI">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Post
+                    </div>
+                </a>
+
+                <!-- Post 2 (Reel) -->
+                <a href="https://www.instagram.com/reel/DP98XnwDauY/" class="instagram-post reel" target="_blank">
+                    <img src="./assets/instagram/reel2.jpeg" alt="Reel EMCI Arte">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Reel
+                    </div>
+                </a>
+
+                <!-- Post 3 -->
+                <a href="https://www.instagram.com/p/DL6CHBOtNIW/" class="instagram-post" target="_blank">
+                    <img src="./assets/instagram/cuadritoIG3.jpeg" alt="mini cuadro">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Post
+                    </div>
+                </a>
+
+                <!-- Post 4 -->
+                <a href="https://www.instagram.com/p/C6w3I_fuN5u/" class="instagram-post" target="_blank">
+                    <img src="./assets/instagram/cuadritoIG2.jpeg" alt="arte personaje">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Post
+                    </div>
+                </a>
+
+                <!-- Post 5 (Reel) -->
+                <a href="https://www.instagram.com/reel/C6zKl2kOiyr/" class="instagram-post reel" target="_blank">
+                    <img src="./assets/instagram/reel1.jpeg" alt="primeros retratos">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Reel
+                    </div>
+                </a>
+
+                <!-- Post 6 -->
+                <a href="https://www.instagram.com/p/C3nrrwCuF5T/" class="instagram-post" target="_blank">
+                    <img src="./assets/instagram/cuadritoIG1.jpg" alt="retrato de mascota">
+                    <div class="post-overlay">
+                        <div class="instagram-logo">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                    </div>
+                    <div class="post-badge">
+                        <i class="fas fa-image"></i> Post
+                    </div>
+                </a>
+            </div>
+
+            <div class="instagram-cta">
+                <p>¿Te gustó nuestro trabajo? Etiquétanos en tus publicaciones</p>
+                <div class="hashtags">
+                    <span>#EMCIArte</span>
+                    <span>#ArteHechoAMano</span>
+                    <span>#RegalosPersonalizados</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--PREGUNTAS FRECUENTES-->
+    <div class="faq-section">
+        <h3>Preguntas frecuentes</h3>
+        <div class="faq-item">
+            <button class="faq-question">¿Cuánto tiempo toma mi encargo?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>El tiempo de elaboración varía según la complejidad de la obra y formato, por lo general
+                        de 7 días a más, pero ten en cuenta que:</p>
+                    <ul>
+                        <li><strong>No realizamos entregas de un día para otro</strong> </li>
+                        <li> Cada obra requiere el tiempo necesario para garantizar calidad.</li>
+                        <li> En caso que se tenga agenda llena, te indicaremos las fechas probables de entrega,
+                            sin embargo,
+                            si requieres con urgencia un encargo, es importante que nos lo hagas saber.
+                        </li>
+                        <li>Para envíos, el tiempo de llegada de cada agencia es variable, aún así hacemos
+                            seguimiento de tu pedido.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Puedo pedir cuadros con dimensiones diferentes a las estándar?<i
+                    class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Sí, los tamaños mencionados en la sección 'Productos' son las más frecuentes, pero trabajamos con
+                        más
+                        medidas de lienzos. El precio se ajustará según el tamaño solicitado y el tiempo puede variar por disponibilidad.</p>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Qué tipo de fotos debo enviar?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Según la categoría elegida las imágenes deben tener buena resolución e iluminación (no
+                        fotos borrosas o con excesivas
+                        sombras) en el caso de retratos. La foto enviada se ajustará a la medida solicitada.</p>
+                </div>
+            </div>
+        </div>
+     
+        <div class="faq-item">
+            <button class="faq-question">¿Cómo elijo entre acrílico y óleo?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Te recomendamos considerar estos factores:</p>
+                    <table class="technique-comparison">
+                        <tr>
+                            <th>Característica</th>
+                            <th>Acrílico</th>
+                            <th>Óleo</th>
+                        </tr>
+                        <tr>
+                            <td>Tiempo de secado</td>
+                            <td>Rápido (horas)</td>
+                            <td>Lento (días/semanas)</td>
+                        </tr>
+                        <tr>
+                            <td>Apariencia</td>
+                            <td>Colores vibrantes</td>
+                            <td>Profundidad</td>
+                        </tr>
+                        <tr>
+                            <td>Durabilidad</td>
+                            <td>Excelente</td>
+                            <td>Excelente (con cuidado)</td>
+                        </tr>
+                        <tr>
+                            <td>Recomendado para</td>
+                            <td>Encargos con tiempo limitado</td>
+                            <td>Obras clásicas/detalladas <br> Retratos de personas</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Puedo cancelar mi pedido?<i class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Nuestra política de cancelación es la siguiente:</p>
+                    <ul>
+                        <li>Aceptamos cancelaciones sólo durante las primeras 24-48 horas después de confirmado
+                            el
+                            pedido.</li>
+                        <li>La cancelación será posible únicamente si no hemos iniciado el trabajo en tu obra.
+                        </li>
+                        <li>Si ya hemos comenzado con tu pieza, no podremos procesar la cancelación pero podemos
+                            discutir modificaciones.</li>
+                        <li>En caso de cancelación aprobada, el adelanto será reembolsado menos un 10% por
+                            gastos
+                            administrativos.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Qué información debo proporcionar para mi encargo?<i
+                    class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Para garantizar el mejor resultado, necesitamos:</p>
+                    <ol>
+                        <li>Formato, tamaño y técnica preferida (acrílico/óleo)</li>
+                        <li>Fotos de referencia claras. Para 'fotos' debe proporcionar una imagen nítida, si es
+                            de 'personas' la foto de referencia debe ser sólo una.</li>
+                        <li>Fecha esperada de entrega (Le confirmaremos el tiempo estimado de su encargo)</li>
+                        <li>Detalles especiales (fondos, colores predominantes, nombre o frase)</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="faq-question">¿Puedo encargar un retrato de personas uniendo varias fotos?<i
+                    class="fas fa-chevron-down"></i></button>
+            <div class="faq-answer">
+                <div class="faq-answer-content">
+                    <p>Podemos trabajar con varias fotos siempre y cuando tengan buena resolución, 
+                        asimismo deberás indicarnos la posición, fondo u otro detalle relevante, y posterior a ello
+                        te enviaremos una foto de referencia antes de iniciar el trabajo para asegurarnos que todo esté correcto.</p>
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     </section>
     <footer class="footer-contacto" id="contacto">
         <div class="footer-container">
@@ -658,10 +616,9 @@
                     <h3 class="footer-title">Enlaces Rápidos</h3>
                     <ul class="footer-links">
                         <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#about">Nosotros</a></li>
                         <li><a href="#productos">Productos</a></li>
-                        <li><a href="#encargar">Cómo encargar</a></li>
-                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#encargos">Cómo encargar</a></li>
+                        <li><a href="#nosotros">Nosotros</a></li>                    
                     </ul>
                 </div>
 
@@ -679,16 +636,6 @@
                             <i class="fab fa-whatsapp"></i>
                         </a>
                     </div>
-                    <!--
-                    <div class="newsletter">
-                        <h4>Suscríbete para novedades</h4>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Tu correo electrónico" required>
-                            <button type="submit">
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
-                    </div>-->
                 </div>
             </div>
 
@@ -702,14 +649,10 @@
                 <div class="copyright">
                     <p>&copy; 2025 EMCI Arte. Todos los derechos reservados.</p>
                 </div>
-                <!-- <div class="legal-links">
-                    <a href="#">Política de privacidad</a>
-                    <a href="#">Términos de servicio</a>
-                </div> -->
             </div>
         </div>
     </footer>
-    <script src="app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
