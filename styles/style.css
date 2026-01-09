@@ -72,6 +72,11 @@ body {
 .logo img {
   transition: var(--transicion-rapida);
 }
+.logo {
+  width: 100px;
+  height: auto;
+  max-width: 100%;
+}
 
 /* Navigation */
 .main-nav {
@@ -942,6 +947,8 @@ body {
   */
   gap: 1.5rem;
   padding: 1rem 0;
+  padding-right: 1.5rem;
+
 }
 
 .instagram-post {
@@ -1927,7 +1934,6 @@ a {
 
   .instagram-gallery {
     grid-template-columns: 1fr;
-    max-width: 400px;
     margin: 0 auto 3rem;
   }
 
@@ -1937,7 +1943,7 @@ a {
   }
 
   .instagram-track {
-    animation-duration: 60s;
+    animation-duration: 40s;
   }
 
   .hashtags {
