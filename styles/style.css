@@ -70,7 +70,6 @@ body {
 }
 
 .logo img {
-  width: 100px;
   transition: var(--transicion-rapida);
 }
 
@@ -277,6 +276,11 @@ body {
 .section-header {
   text-align: center;
   margin-bottom: 4rem;
+  opacity: 0;
+}
+
+.section-header .animate__animated {
+  opacity: 1;
 }
 
 .section-title {
@@ -879,11 +883,6 @@ body {
   background: var(--color-fondo);
 }
 
-.instagram-header {
-  text-align: center;
-  margin-bottom: 4rem;
-}
-
 .instagram-intro {
   max-width: 600px;
   margin: 0 auto;
@@ -919,11 +918,30 @@ body {
   box-shadow: var(--sombra-media);
 }
 
+.carousel-insta {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+.instagram-track {
+  display: flex;
+  width: max-content;
+  animation: scrollInsta 40s linear infinite;
+}
+
+.carousel-insta:hover .instagram-track {
+  animation-play-state: paused;
+}
+
+
 .instagram-gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
+  display: flex;
+  /*grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); con display grid
   margin-bottom: 3rem;
+  */
+  gap: 1.5rem;
+  padding: 1rem 0;
 }
 
 .instagram-post {
@@ -932,9 +950,22 @@ body {
   overflow: hidden;
   box-shadow: var(--sombra-suave);
   transition: var(--transicion-rapida);
+  min-width: 280px;
+  max-width: 280px;
   aspect-ratio: 1;
-  /* Formato cuadrado */
+  /* Formato cuadrado*/
 }
+
+@keyframes scrollInsta {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 
 .instagram-post:hover {
   transform: translateY(-5px);
@@ -1207,7 +1238,6 @@ body {
   border-radius: 15px;
   overflow: hidden;
   margin-bottom: 1rem;
-  height: 500px;
   box-shadow: var(--sombra-media);
   width: 100%;
   max-width: 100%;
@@ -1224,21 +1254,14 @@ body {
   display: flex;
   gap: 0.8rem;
   overflow-x: auto;
-  /* ← Permitir scroll horizontal si hay muchas imágenes */
+  /* ← Permite scroll horizontal si hay muchas imágenes */
   padding: 10px 0;
-  scrollbar-width: thin;
-  scrollbar-color: var(--color-hover) rgba(0, 0, 0, 0.1);
   width: 100%;
 }
 
-/* Scrollbar para navegadores WebKit */
+/* navegadores WebKit - ocultar la barra*/
 .galeria-miniaturas::-webkit-scrollbar {
-  height: 6px;
-}
-
-.galeria-miniaturas::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
-  border-radius: 3px;
+  display: none;
 }
 
 .galeria-miniaturas::-webkit-scrollbar-thumb {
@@ -1750,7 +1773,7 @@ a {
   }
 
   .producto-detalle-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: 2rem;
   }
 
@@ -1906,6 +1929,15 @@ a {
     grid-template-columns: 1fr;
     max-width: 400px;
     margin: 0 auto 3rem;
+  }
+
+  .instagram-post {
+    min-width: 220px;
+    max-width: 220px;
+  }
+
+  .instagram-track {
+    animation-duration: 60s;
   }
 
   .hashtags {
