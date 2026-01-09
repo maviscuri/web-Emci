@@ -72,6 +72,7 @@ body {
 .logo img {
   transition: var(--transicion-rapida);
 }
+
 .logo {
   width: 100px;
   height: auto;
@@ -1168,6 +1169,30 @@ body {
   line-height: 1.6;
 }
 
+table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+  caption-side: top;
+}
+
+td,
+th {
+  padding: 0.3em;
+}
+
+th,
+td {
+  border-bottom: 1px solid #999;
+  width: 25%;
+}
+
+.faq-answer table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+}
+
 .faq-answer ul,
 .faq-answer ol {
   padding-left: 1.5rem;
@@ -2002,6 +2027,10 @@ a {
     /* ← Apilar botones verticalmente */
   }
 
+  .faq-answer table{
+    overflow-x: auto;
+  }
+
   .btn-whatsapp,
   .btn-encargar {
     min-width: 100%;
@@ -2182,13 +2211,12 @@ a {
     font-size: 1rem;
   }
 
-  .payment-icons {
-    margin: auto 5rem;
+  .faq-answer table {
+    overflow-x: auto;
   }
 
-  .technique-comparison {
-    display: block;
-    overflow-x: auto;
+  .payment-icons {
+    margin: auto 5rem;
   }
 
   /*footer*/
